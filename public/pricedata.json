@@ -1,0 +1,59 @@
+
+[
+  {
+    "id": 1,
+    "name": "Basic",
+    "price": "9",
+    "description": "Essential features for casual users",
+    "features": [
+      "5 GB cloud storage",
+      "Basic file sharing",
+      "Email support (48h response)",
+      "Single device sync",
+      "2 team members max"
+    ],
+    "highlight": false,
+    "period": "Month",
+    "button": "Start Basic Plan"
+  },
+  {
+    "id": 2,
+    "name": "Pro",
+    "price": "49",
+    "description": "Advanced tools for power users",
+    "features": [
+      "100 GB cloud storage",
+      "Advanced file sharing with permissions",
+      "Priority chat support (4h response)",
+      "Unlimited device sync",
+      "10 team members max",
+      "Version history (30 days)",
+      "API access",
+      "Advanced analytics dashboard"
+    ],
+    "highlight": true,
+    "period": "Month",
+    "button": "Upgrade to Pro"
+  },
+  {
+    "id": 3,
+    "name": "Ultra Pro Max",
+    "price": "149",
+    "description": "Complete solution for large teams",
+    "features": [
+      "1 TB cloud storage",
+      "Enterprise-grade security",
+      "24/7 phone & dedicated support",
+      "Unlimited device sync",
+      "Unlimited team members",
+      "Version history (365 days)",
+      "Full API access",
+      "Custom analytics & reports",
+      "SSO & SAML integration",
+      "Onboarding training session"
+    ],
+    "highlight": false,
+    "period": "Month",
+    "button": "Contact Enterprise Team"
+  }
+]

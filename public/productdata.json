@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "name": "VPN Secure Pro",
+    "description": "High-speed, military-grade encryption VPN with no-logs policy and global servers.",
+    "price": 12.99,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "256-bit AES encryption",
+      "90+ server locations",
+      "No-logs policy",
+      "Kill switch",
+      "5 simultaneous devices"
+    ],
+    "icon": "🛡️"
+  },
+  {
+    "id": 2,
+    "name": "Cloud Backup Essential",
+    "description": "Automated cloud backup solution for individuals and small teams.",
+    "price": 59.99,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "1 TB encrypted storage",
+      "Automated daily backups",
+      "File versioning (30 days)",
+      "Cross-platform sync",
+      "24/7 support"
+    ],
+    "icon": "☁️"
+  },
+  {
+    "id": 3,
+    "name": "DevOps Master Toolkit",
+    "description": "All-in-one DevOps automation suite for CI/CD, monitoring, and logging.",
+    "price": 299.99,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "CI/CD pipelines",
+      "Real-time monitoring",
+      "Centralized logging",
+      "Infrastructure as code",
+      "Team collaboration tools"
+    ],
+    "icon": "⚙️"
+  },
+  {
+    "id": 4,
+    "name": "AI Code Assistant",
+    "description": "AI-powered coding companion that suggests, reviews, and refactors code.",
+    "price": 19.99,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Real-time code suggestions",
+      "Bug detection & fixes",
+      "Code documentation generator",
+      "Supports 25+ languages",
+      "VS Code & JetBrains integration"
+    ],
+    "icon": "🤖"
+  },
+  {
+    "id": 5,
+    "name": "Antivirus Ultimate",
+    "description": "Complete cybersecurity suite with real-time threat protection and ransomware shield.",
+    "price": 49.99,
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Real-time malware scanning",
+      "Ransomware protection",
+      "Secure browser",
+      "Password manager",
+      "Parental controls"
+    ],
+    "icon": "🔒"
+  },
+  {
+    "id": 6,
+    "name": "Password Vault Pro",
+    "description": "Enterprise-grade password manager with zero-knowledge architecture.",
+    "price": 2.99,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Unlimited passwords",
+      "Secure sharing",
+      "Dark web monitoring",
+      "Biometric login",
+      "Emergency access"
+    ],
+    "icon": "🔑"
+  },
+  {
+    "id": 7,
+    "name": "Server Monitor Lifetime",
+    "description": "Lifetime license for server uptime and performance monitoring (up to 50 nodes).",
+    "price": 199.99,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "50 server nodes",
+      "Uptime monitoring (1-min intervals)",
+      "Slack/Email alerts",
+      "Performance analytics",
+      "Lifetime updates"
+    ],
+    "icon": "📊"
+  },
+  {
+    "id": 8,
+    "name": "DB Optimizer",
+    "description": "Database performance tuning and query optimization tool for SQL and NoSQL.",
+    "price": 89.99,
+    "period": "one-time",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Query performance analysis",
+      "Automatic indexing suggestions",
+      "Deadlock detection",
+      "Multi-database support",
+      "Export reports (PDF/CSV)"
+    ],
+    "icon": "🗄️"
+  }
+]
