@@ -1,1 +1,7 @@
 @import "tailwindcss";
+@plugin "daisyui";
+
+.max-mr{
+max-width: 1200px;
+margin: 0 auto;
+}

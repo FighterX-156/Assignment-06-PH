@@ -1,10 +1,10 @@
 import { ShoppingCart } from "lucide-react";
 import React from "react";
 
-const Navbar = ({cartCard}) => {
+const Navbar = () => {
   return (
     <div className="shadow-sm">
-      <div className="navbar max-mA">
+      <div className="navbar max-mr ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -72,7 +72,7 @@ const Navbar = ({cartCard}) => {
           <div className="flex items-center gap-5">
             <div className="relative">
               <div className="badge badge-primary badge-xs absolute -top-3 -right-2">
-                {cartCard.length}
+                {}
               </div>
               <ShoppingCart />
             </div>
