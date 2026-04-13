@@ -5,6 +5,7 @@ import './App.css'
 import Navbar from './Components/Header/Navbar'
 import Banner from './Components/Hero/Banner'
 import ProductSec from './Components/Products/ProductSec'
+import Steps from './Components/steps/Step';
 
 
 
@@ -14,6 +15,13 @@ const fetchProductData = async () => {
 };
 
 const productPromise = fetchProductData();
+
+const fetchStepsData = async () => {
+  const res = await fetch("/step.json");
+  return res.json();
+};
+
+const stepsPromise = fetchStepsData();
 
 function App() {
   const [cartCard, setCartCard] = useState([]);
@@ -29,6 +37,10 @@ function App() {
           setCartCard={setCartCard}
         ></ProductSec>
       </Suspense>
+      <Suspense fallback={"Ashitese..."}>
+        <Steps stepsPromise={stepsPromise}></Steps>
+      </Suspense>
+      
     <ToastContainer />
     </>
   )
