@@ -1,8 +1,11 @@
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css'
-import Navbar from './Components/Header/navbar'
+import Navbar from './Components/Header/Navbar'
 import Banner from './Components/Hero/Banner'
 import ProductSec from './Components/Products/ProductSec'
+
 
 
 const fetchProductData = async () => {
@@ -10,12 +13,14 @@ const fetchProductData = async () => {
   return res.json();
 };
 
+const productPromise = fetchProductData();
+
 function App() {
-   const productPromise = fetchProductData();
   const [cartCard, setCartCard] = useState([]);
+
   return (
     <>
-    <Navbar></Navbar>
+    <Navbar cartCard={cartCard}></Navbar>
     <Banner></Banner>
     <Suspense fallback={"Ashitese..."}>
         <ProductSec
@@ -24,9 +29,10 @@ function App() {
           setCartCard={setCartCard}
         ></ProductSec>
       </Suspense>
-
+    <ToastContainer />
     </>
   )
 }
+
 
 export default App

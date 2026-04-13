@@ -1,6 +1,6 @@
 import React, { use, useState } from "react";
 import Products from "./Products";
-import Cart from "../cart/Cart";
+import Cartsection from "../Cart/Cartsection";
 
 const ProductSec = ({ productPromise, cartCard, setCartCard }) => {
   const [btnType, setBtnType] = useState("products");
@@ -35,8 +35,9 @@ const ProductSec = ({ productPromise, cartCard, setCartCard }) => {
           setCartCard={setCartCard}
         ></Products>
       ) : (
-        <Cart cartCard={cartCard} setCartCard={setCartCard}></Cart>
+        <Cartsection cartCard={cartCard} setCartCard={setCartCard}></Cartsection>
       )}
+
     </div>
   );
 };

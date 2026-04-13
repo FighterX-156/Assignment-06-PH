@@ -1,7 +1,7 @@
 import { ShoppingCart } from "lucide-react";
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({cartCard}) => {
   return (
     <div className="shadow-sm">
       <div className="navbar max-mr ">
@@ -72,7 +72,7 @@ const Navbar = () => {
           <div className="flex items-center gap-5">
             <div className="relative">
               <div className="badge badge-primary badge-xs absolute -top-3 -right-2">
-                {}
+                {cartCard.length}
               </div>
               <ShoppingCart />
             </div>
