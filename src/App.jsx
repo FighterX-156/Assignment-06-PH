@@ -4,8 +4,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import './App.css'
 import Navbar from './Components/Header/Navbar'
 import Banner from './Components/Hero/Banner'
-import ProductSec from './Components/Products/ProductSec'
+import ProductSec from './Components/Products/ProductSec';
 import Steps from './Components/steps/Step';
+import Priceplan from './Components/PriceCard/Priceplan';
+
 
 
 
@@ -22,6 +24,13 @@ const fetchStepsData = async () => {
 };
 
 const stepsPromise = fetchStepsData();
+
+const fetchPricingData = async ()=>{
+  const res = await fetch('/pricedata.json');
+  return res.json();
+}
+
+ const pricingPromise = fetchPricingData()
 
 function App() {
   const [cartCard, setCartCard] = useState([]);
@@ -40,7 +49,9 @@ function App() {
       <Suspense fallback={"Ashitese..."}>
         <Steps stepsPromise={stepsPromise}></Steps>
       </Suspense>
-      
+      <Suspense fallback={"Ashitese..."}>
+        <Priceplan pricingPromise={pricingPromise}></Priceplan>
+      </Suspense>
     <ToastContainer />
     </>
   )
