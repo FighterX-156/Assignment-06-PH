@@ -7,6 +7,7 @@ import Banner from './Components/Hero/Banner'
 import ProductSec from './Components/Products/ProductSec';
 import Steps from './Components/steps/Step';
 import Priceplan from './Components/PriceCard/Priceplan';
+import Workflow from './Components/workflow/Workflow';
 
 
 
@@ -52,6 +53,7 @@ function App() {
       <Suspense fallback={"Ashitese..."}>
         <Priceplan pricingPromise={pricingPromise}></Priceplan>
       </Suspense>
+      <Workflow></Workflow>
     <ToastContainer />
     </>
   )
