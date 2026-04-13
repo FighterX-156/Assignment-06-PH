@@ -8,6 +8,7 @@ import ProductSec from './Components/Products/ProductSec';
 import Steps from './Components/steps/Step';
 import Priceplan from './Components/PriceCard/Priceplan';
 import Workflow from './Components/workflow/Workflow';
+import Footer from './Components/Footer/Footer';
 
 
 
@@ -54,6 +55,7 @@ function App() {
         <Priceplan pricingPromise={pricingPromise}></Priceplan>
       </Suspense>
       <Workflow></Workflow>
+      <Footer></Footer>
     <ToastContainer />
     </>
   )

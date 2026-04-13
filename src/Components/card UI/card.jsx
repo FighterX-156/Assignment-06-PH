@@ -2,55 +2,76 @@ import React from 'react';
 import { toast } from 'react-toastify';
 
 const Card = ({ product, cartCard, setCartCard }) => {
-    const { name, description, price, period, tag, icon, features } = product;
+    const isBuyNow = cartCard.some((item) => item.id === product.id);
 
-    const handleAddToCart = () => {
-        const isExist = cartCard.find(item => item.id === product.id);
-        if (isExist) {
-            return toast.info(`${name} is already in your cart!`);
-        }
-        setCartCard([...cartCard, product]);
-        toast.success(`${name} added to cart!`);
-    };
+  const handelBuyNow = () => {
+    toast.success(`${product.name} added to cart`);
+    setCartCard([...cartCard, product]);
+  };
 
     return (
-        <div className="bg-white border border-gray-100 rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full relative">
-            {tag && (
-                <div className="absolute top-4 right-4 bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                    {tag}
-                </div>
-            )}
-            
-            <div className="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                {icon}
+        <div className="card w-full h-full bg-base-100 shadow-sm border border-base-300 hover:scale-105 hover:shadow-xl transition-all decoration-1">
+        <div className="card-body">
+          <div className="flex justify-between">
+            <div className="p-2 shadow border-dotted border-2 border-base-300 rounded-full">
+              <span className="h-10">{product.icon}</span>
             </div>
-
-            <h3 className="text-xl font-bold text-gray-900 mb-2">{name}</h3>
-            <p className="text-gray-500 text-sm mb-6 flex-grow">{description}</p>
-
-            <div className="space-y-3 mb-8">
-                {features.slice(0, 3).map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                        <span className="text-green-500">✓</span>
-                        {feature}
-                    </div>
-                ))}
-            </div>
-
-            <div className="flex items-end justify-between mt-auto">
-                <div>
-                    <span className="text-2xl font-black text-gray-900">${price}</span>
-                    {period !== "one-time" && <span className="text-gray-400 text-sm">/{period}</span>}
-                </div>
-                <button 
-                    onClick={handleAddToCart}
-                    className="bg-gray-900 text-white px-5 py-2.5 rounded-xl font-semibold text-sm hover:bg-[#4F39F6] transition-colors duration-300"
-                >
-                    Add to Cart
-                </button>
-            </div>
+            <span
+              className={`badge badge-soft ${product.tagType == "popular"
+                  ? "badge-primary"
+                  : product.tagType == "new"
+                    ? " badge-success"
+                    : "badge-warning"
+                } p-3 rounded-full`}
+            >
+              {product.tag}
+            </span>
+          </div>
+          <h2 className="text-[24px] font-bold">{product.name}</h2>
+          <p className="text-gray-600">{product.description}</p>
+          <span className="text-2xl font-bold">
+            ${product.price}
+            <span className="text-gray-600 text-[16px] font-normal">
+              /{product.period}
+            </span>
+          </span>
+          <ul className="mt-6 flex flex-col gap-2 text-xs">
+            {product.features.map((feature, ind) => {
+              return (
+                <li key={ind}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="size-4 me-2 inline-block text-success"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>{feature}</span>
+                </li>
+              );
+            })}
+          </ul>
+          <div className="mt-6">
+            <button
+              onClick={handelBuyNow}
+              className={`btn ${isBuyNow == true
+                  ? "btn-disabled opacity-50 bg-linear-to-r from-[#4F39F6] to-[#9514FA]"
+                  : "opacity-100 bg-linear-to-r from-[#4F39F6] to-[#9514FA]"
+                } rounded-full border-0 text-white btn-block`}
+            >
+              {isBuyNow == true ? "Added To Cart" : "Buy Now"}
+            </button>
+          </div>
         </div>
+      </div>
     );
 };
 
-export default Card;
+export default Card;
